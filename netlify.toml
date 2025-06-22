@@ -1,11 +1,2 @@
 # netlify.toml
-
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Basic-Auth = "keetio:keetio2025"
-
-[[headers]]
-  for = "/update.json"
-  [headers.values]
-    Basic-Auth = ""
+# Προσωρινά άδειο — η προστασία γίνεται πλέον μέσω του Netlify UI
