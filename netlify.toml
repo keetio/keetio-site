@@ -1,0 +1,23 @@
+[build]
+  publish = "./"
+  command = ""
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Basic-Auth = "keetio:keetio2025"
+
+[[headers]]
+  for = "/license"
+  [headers.values]
+    Basic-Auth = ""
+
+[[headers]]
+  for = "/privacy"
+  [headers.values]
+    Basic-Auth = ""
+
+[[headers]]
+  for = "/update.json"
+  [headers.values]
+    Basic-Auth = ""
