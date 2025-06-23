@@ -1,9 +1,6 @@
 {
-  "latestVersion": "1.0.2",
-  "minimumRequiredVersion": "1.0.1",
-  "updateMessage": {
-    "en": "A new update is available with important fixes.",
-    "el": "Μια νέα ενημέρωση είναι διαθέσιμη με σημαντικές διορθώσεις."
-  },
-  "forceUpdate": false
+  "latest_version": "1.0.2",
+  "mandatory": false,
+  "message_en": "A new update is available with important fixes.",
+  "message_el": "Μια νέα ενημέρωση είναι διαθέσιμη με σημαντικές διορθώσεις."
 }
