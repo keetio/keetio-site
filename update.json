@@ -1,6 +1,6 @@
 {
-  "latest_version": "1.0.2",
-  "mandatory": false,
-  "message_en": "A new update is available with important fixes.",
-  "message_el": "Μια νέα ενημέρωση είναι διαθέσιμη με σημαντικές διορθώσεις."
+  "latest_version": "9.9.9",
+  "mandatory": true,
+  "message_en": "Update now to continue using Keetio.",
+  "message_el": "Κάντε ενημέρωση για να συνεχίσετε να χρησιμοποιείτε το Keetio."
 }
