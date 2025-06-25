@@ -1,8 +1,8 @@
 {
   "latestVersion": "1.1.0",
-  "updateRequired": true,
+  "updateRequired": false,
   "message": {
-    "en": "A new version is available and required. Please update to continue.",
-    "el": "Μια νέα έκδοση είναι διαθέσιμη και απαιτείται. Παρακαλώ ενημερώστε για να συνεχίσετε."
+    "en": "A new version is available. Please update for the best experience.",
+    "el": "Μια νέα έκδοση είναι διαθέσιμη. Παρακαλώ ενημερώστε για την καλύτερη εμπειρία."
   }
 }
