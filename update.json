@@ -1,19 +1,8 @@
 {
-  "latestVersion": "1.0.0",
-  "minimumRequiredVersion": "1.0.0",
-  "forceUpdate": false,
+  "latestVersion": "1.1.0",
+  "updateRequired": false,
   "message": {
-    "en": "You already have the latest version. Thank you!",
-    "el": "Έχετε ήδη την τελευταία έκδοση. Ευχαριστούμε!",
-    "es": "Ya tienes la última versión. ¡Gracias!",
-    "fr": "Vous avez déjà la dernière version. Merci !",
-    "de": "Sie haben bereits die neueste Version. Danke!",
-    "it": "Hai già l'ultima versione. Grazie!",
-    "pt": "Você já tem a versão mais recente. Obrigado!",
-    "ru": "У вас уже последняя версия. Спасибо!",
-    "zh": "您已经拥有最新版本。谢谢！",
-    "ja": "最新バージョンをご利用中です。ありがとうございます！",
-    "hi": "आपके पास पहले से ही नवीनतम संस्करण है। धन्यवाद!",
-    "ar": "لديك بالفعل أحدث إصدار. شكرًا لك!"
+    "en": "A new version is available. Please update for the best experience.",
+    "el": "Μια νέα έκδοση είναι διαθέσιμη. Παρακαλώ ενημερώστε για την καλύτερη εμπειρία."
   }
 }
