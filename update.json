@@ -1,6 +1,6 @@
 {
-  "latest_version": "1.0.2",
-  "mandatory": false,
-  "message_en": "Keetio is up to date!",
-  "message_el": "Έχετε την πιο πρόσφατη έκδοση!"
+  "latestVersion": "2.0.0",
+  "minimumRequiredVersion": "1.0.0",
+  "forceUpdate": false,
+  "message": "A new version of Keetio is available with performance improvements and bug fixes."
 }
