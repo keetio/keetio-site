@@ -36,10 +36,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 40px 60px;
+      padding: 60px 40px;
       background: #fff0f4;
-      flex-wrap: wrap;
-      gap: 60px;
+      flex-wrap: nowrap;
     }
 
     .section:nth-child(even) {
@@ -47,15 +46,17 @@
     }
 
     .section img {
-      max-width: 420px;
+      max-width: 400px;
       width: 100%;
       border-radius: 8px;
+      margin: 0 40px;
     }
 
     .section .text {
-      max-width: 420px;
+      max-width: 460px;
       font-size: 18px;
       color: #333;
+      margin: 0 40px;
     }
 
     footer {
@@ -70,11 +71,17 @@
       margin: 10px;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
       .section {
         flex-direction: column !important;
-        padding: 30px 20px;
-        gap: 30px;
+        padding: 40px 20px;
+        flex-wrap: wrap;
+      }
+
+      .section img,
+      .section .text {
+        margin: 20px auto;
+        text-align: center;
       }
     }
   </style>
@@ -92,7 +99,7 @@
   <main>
     <!-- Section 1: Logo -->
     <div class="section">
-      <img src="/assets/keetio%20final%20logo.png" alt="Keetio Logo" />
+      <img src="keetio-logo.png" alt="Keetio Logo" />
       <div class="text">
         <h2>Welcome to Keetio</h2>
         <p>the online social app – no swipes, just signals!</p>
