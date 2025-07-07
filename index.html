@@ -34,29 +34,35 @@
 
     .section {
       display: flex;
-      align-items: center;
       justify-content: center;
-      padding: 60px 40px;
+      padding: 60px 20px;
       background: #fff0f4;
+    }
+
+    .section .content {
+      max-width: 1100px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 80px;
       flex-wrap: nowrap;
     }
 
-    .section:nth-child(even) {
+    .section:nth-child(even) .content {
       flex-direction: row-reverse;
     }
 
     .section img {
-      max-width: 400px;
+      max-width: 420px;
       width: 100%;
       border-radius: 8px;
-      margin: 0 40px;
     }
 
     .section .text {
-      max-width: 460px;
+      max-width: 500px;
       font-size: 18px;
       color: #333;
-      margin: 0 40px;
     }
 
     footer {
@@ -72,15 +78,14 @@
     }
 
     @media (max-width: 900px) {
-      .section {
+      .section .content {
         flex-direction: column !important;
-        padding: 40px 20px;
-        flex-wrap: wrap;
+        gap: 30px;
       }
 
       .section img,
       .section .text {
-        margin: 20px auto;
+        margin: 0 auto;
         text-align: center;
       }
     }
@@ -99,82 +104,100 @@
   <main>
     <!-- Section 1: Logo -->
     <div class="section">
-      <img src="keetio-logo.png" alt="Keetio Logo" />
-      <div class="text">
-        <h2>Welcome to Keetio</h2>
-        <p>the online social app – no swipes, just signals!</p>
+      <div class="content">
+        <img src="keetio-logo.png" alt="Keetio Logo" />
+        <div class="text">
+          <h2>Welcome to Keetio</h2>
+          <p>the online social app – no swipes, just signals!</p>
+        </div>
       </div>
     </div>
 
     <!-- Section 2 -->
     <div class="section">
-      <img src="images/section2.jpg" alt="People interacting" />
-      <div class="text">
-        <h2>Make new connections</h2>
-        <p>Meet people around you using our unique map and Wi-Fi modes.</p>
+      <div class="content">
+        <img src="images/section2.jpg" alt="People interacting" />
+        <div class="text">
+          <h2>Make new connections</h2>
+          <p>Meet people around you using our unique map and Wi-Fi modes.</p>
+        </div>
       </div>
     </div>
 
     <!-- Section 3 -->
     <div class="section">
-      <img src="images/section3.jpg" alt="People chatting" />
-      <div class="text">
-        <h2>Start real conversations</h2>
-        <p>Break the ice with signals, not endless scrolling.</p>
+      <div class="content">
+        <img src="images/section3.jpg" alt="People chatting" />
+        <div class="text">
+          <h2>Start real conversations</h2>
+          <p>Break the ice with signals, not endless scrolling.</p>
+        </div>
       </div>
     </div>
 
     <!-- Section 4 -->
     <div class="section">
-      <img src="images/section4.jpg" alt="Group of friends" />
-      <div class="text">
-        <h2>Join the community</h2>
-        <p>Be part of the Keetio vibe – real people, real connections.</p>
+      <div class="content">
+        <img src="images/section4.jpg" alt="Group of friends" />
+        <div class="text">
+          <h2>Join the community</h2>
+          <p>Be part of the Keetio vibe – real people, real connections.</p>
+        </div>
       </div>
     </div>
 
     <!-- Section 5 -->
     <div class="section">
-      <img src="images/section5.jpg" alt="Social fun" />
-      <div class="text">
-        <h2>Fun and Safe</h2>
-        <p>Enjoy a welcoming space to express yourself without judgment.</p>
+      <div class="content">
+        <img src="images/section5.jpg" alt="Social fun" />
+        <div class="text">
+          <h2>Fun and Safe</h2>
+          <p>Enjoy a welcoming space to express yourself without judgment.</p>
+        </div>
       </div>
     </div>
 
     <!-- Section 6 -->
     <div class="section">
-      <img src="images/section6.jpg" alt="Explore nearby" />
-      <div class="text">
-        <h2>Discover Nearby</h2>
-        <p>Find interesting people near you – right now, in real time.</p>
+      <div class="content">
+        <img src="images/section6.jpg" alt="Explore nearby" />
+        <div class="text">
+          <h2>Discover Nearby</h2>
+          <p>Find interesting people near you – right now, in real time.</p>
+        </div>
       </div>
     </div>
 
     <!-- Section 7 -->
     <div class="section">
-      <img src="images/section7.jpg" alt="Easy access" />
-      <div class="text">
-        <h2>Easy to Use</h2>
-        <p>Simple and clean interface designed for all users.</p>
+      <div class="content">
+        <img src="images/section7.jpg" alt="Easy access" />
+        <div class="text">
+          <h2>Easy to Use</h2>
+          <p>Simple and clean interface designed for all users.</p>
+        </div>
       </div>
     </div>
 
     <!-- Section 8 -->
     <div class="section">
-      <img src="images/section8.jpg" alt="Modern tools" />
-      <div class="text">
-        <h2>Modern Tools</h2>
-        <p>Use innovative features like greeting signals and chat reactions.</p>
+      <div class="content">
+        <img src="images/section8.jpg" alt="Modern tools" />
+        <div class="text">
+          <h2>Modern Tools</h2>
+          <p>Use innovative features like greeting signals and chat reactions.</p>
+        </div>
       </div>
     </div>
 
     <!-- Section 9 -->
     <div class="section">
-      <img src="images/section9.jpg" alt="Privacy focused" />
-      <div class="text">
-        <h2>Privacy First</h2>
-        <p>We respect your privacy and give you full control of your data.</p>
+      <div class="content">
+        <img src="images/section9.jpg" alt="Privacy focused" />
+        <div class="text">
+          <h2>Privacy First</h2>
+          <p>We respect your privacy and give you full control of your data.</p>
+        </div>
       </div>
     </div>
   </main>
