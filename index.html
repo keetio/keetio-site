@@ -36,9 +36,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 40px 20px;
+      padding: 40px 60px;
       background: #fff0f4;
       flex-wrap: wrap;
+      gap: 60px;
     }
 
     .section:nth-child(even) {
@@ -46,15 +47,13 @@
     }
 
     .section img {
-      max-width: 400px;
+      max-width: 420px;
       width: 100%;
-      margin: 20px;
       border-radius: 8px;
     }
 
     .section .text {
-      max-width: 400px;
-      margin: 20px;
+      max-width: 420px;
       font-size: 18px;
       color: #333;
     }
@@ -74,6 +73,8 @@
     @media (max-width: 768px) {
       .section {
         flex-direction: column !important;
+        padding: 30px 20px;
+        gap: 30px;
       }
     }
   </style>
@@ -91,7 +92,7 @@
   <main>
     <!-- Section 1: Logo -->
     <div class="section">
-      <img src="https://keetio.github.io/assets/keetio%20final%20logo.png" alt="Keetio Logo" />
+      <img src="/assets/keetio%20final%20logo.png" alt="Keetio Logo" />
       <div class="text">
         <h2>Welcome to Keetio</h2>
         <p>the online social app – no swipes, just signals!</p>
