@@ -1,8 +1,8 @@
 {
-  "latestVersion": "1.0.0",
+  "latestVersion": "1.1.0",
   "updateRequired": false,
   "message": {
-    "en": "You are using the latest version of the app.",
-    "el": "Χρησιμοποιείτε την πιο πρόσφατη έκδοση της εφαρμογής."
+    "en": "A new version is available. Please update for the best experience.",
+    "el": "Μια νέα έκδοση είναι διαθέσιμη. Παρακαλώ ενημερώστε για την καλύτερη εμπειρία."
   }
 }
