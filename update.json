@@ -1,9 +1,9 @@
 {
-{ "latestVersion": "3.0.0", 
-  "minVersion": "2.9.0", 
+  "latestVersion": "3.0.0",
+  "minVersion": "2.9.0",
   "forceUpdate": true,
   "message": {
-    "en": "A new version is required. Please update to continue using the app.",
+    "en": "A new version is required. Please update to continue.",
     "el": "Απαιτείται νέα έκδοση. Παρακαλώ ενημερώστε την εφαρμογή για να συνεχίσετε."
   }
 }
