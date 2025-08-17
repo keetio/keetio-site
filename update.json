@@ -1,9 +1,9 @@
 {
-  "latestVersion": "1.0.0",
-  "minVersion": "1.0.0",
-  "forceUpdate": false,
+  "latestVersion": "2.0.0",
+  "minVersion": "2.0.0",
+  "forceUpdate": true,
   "message": {
-    "en": "You are up to date",
-    "el": "Έχετε την τελευταία έκδοση"
+    "en": "Update required to continue",
+    "el": "Απαιτείται ενημέρωση για να συνεχίσετε"
   }
 }
