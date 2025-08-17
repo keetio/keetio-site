@@ -1,9 +1,11 @@
 {
-  "latestVersion": "1.0.0",
-  "minVersion": "1.0.0",
+  "latestVersion": "2.0.0",
+  "minVersion": "1.5.0",
   "forceUpdate": false,
   "message": {
-    "en": "You are up to date",
-    "el": "Έχετε την τελευταία έκδοση"
-  }
+    "en": "You already have the latest version.\nThank you!",
+    "el": "Έχετε ήδη την τελευταία έκδοση.\nΕυχαριστούμε!"
+  },
+  "androidUrl": "https://play.google.com/store/apps/details?id=com.keetio.app",
+  "iosUrl": "https://apps.apple.com/app/id1234567890"
 }
