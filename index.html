@@ -5,165 +5,111 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Keetio - The Social App</title>
 
-  <!-- Google Font με πλήρη υποστήριξη ελληνικών -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Noto Sans: πλήρης υποστήριξη ελληνικών -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --brand:#6c5ce7;          /* Keetio purple */
-      --ink:#1f2330;            /* Βασικό κείμενο */
-      --muted:#5b6170;          /* Δευτερεύον κείμενο */
-      --bg:#f6f7fb;             /* Φόντο σελίδας */
-      --surface: #ffffff;       /* Επιφάνεια καρτών */
-      --border: #e9e9f2;        /* Γραμμές ορίων */
-      --shadow: 0 8px 28px rgba(20,20,43,.08);
+      --brand:#6c5ce7;
+      --ink:#1f2330;
+      --muted:#5b6170;
+      --bg:#f6f7fb;
+      --surface:#fff;
+      --border:#e9e9f2;
+      --shadow:0 8px 28px rgba(20,20,43,.08);
+      --underline-h:4px;
     }
 
-    /* Βασικά */
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: "Noto Sans", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      color: var(--ink);
-      background: var(--bg) url("images/backround.png") repeat;
-      background-size: 1400px auto;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:"Noto Sans",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      color:var(--ink);
+      background:var(--bg) url("images/backround.png") repeat;
+      background-size:1400px auto;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
     }
-    h1,h2 { line-height: 1.2; margin: 0 0 .5rem; }
-    h2 { font-size: 28px; }
-    p { margin: 0; color: var(--muted); font-size: 17px; }
-    a { color: var(--brand); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    h1,h2{line-height:1.2;margin:0 0 .5rem}
+    h2{font-size:32px} /* μεγαλύτεροι τίτλοι */
+    p{margin:0;color:var(--muted);font-size:18px}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
 
     /* Μαύρη TOP BAR */
-    header {
-      background-color: #111;      /* πιο “βαθύ” μαύρο για κοντράστ */
-      color: #fff;
-      padding: 12px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-      border-bottom: 1px solid rgba(255,255,255,.08);
+    header{
+      background:#111;color:#fff;padding:12px 20px;
+      display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+      border-bottom:1px solid rgba(255,255,255,.08);
     }
-    header .email a { color:#fff; font-weight:700; letter-spacing:.2px; }
-    header nav a {
-      color:#fff; font-weight:600; margin-left: 16px;
-      padding: 6px 10px; border-radius: 10px;
+    header .email a{color:#fff;font-weight:700;letter-spacing:.2px}
+    header nav a{
+      color:#fff;font-weight:600;margin-left:16px;padding:6px 10px;border-radius:10px
     }
-    header nav a:hover { background: rgba(255,255,255,.08); text-decoration:none; }
+    header nav a:hover{background:rgba(255,255,255,.08);text-decoration:none}
 
-    /* Hero */
-    .hero {
-      max-width: 1200px;
-      margin: 40px auto 10px;
-      padding: 0 20px;
-    }
+    /* HERO */
+    .hero{max-width:1200px;margin:40px auto 10px;padding:0 20px}
     .hero-card{
-      display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 40px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      box-shadow: var(--shadow);
-      padding: 40px;
+      display:grid;grid-template-columns:1.1fr .9fr;gap:40px;
+      background:var(--surface);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow);padding:40px;
     }
-    .k-logo { max-width: 280px; width: 100%; height: auto; display:block; }
-    .tagline { font-size: 18px; margin-top: 8px; }
-    .hero-right{
-      display: flex; align-items:center; justify-content:center;
+    .k-logo{max-width:340px;width:100%;height:auto;display:block} /* μεγαλύτερο logo */
+    .hero h2{font-size:36px;font-weight:800;display:inline-block;position:relative;padding-bottom:10px}
+    .hero h2::after{
+      content:"";position:absolute;left:0;right:0;bottom:-6px;height:var(--underline-h);
+      background:linear-gradient(90deg,var(--brand),#9a8bff);border-radius:99px;
     }
+    .tagline{font-size:20px;font-weight:600;margin-top:10px} /* μεγαλύτερο & πιο έντονο */
+    .hero-right{display:flex;align-items:center;justify-content:center}
     .hero-right .hero-illu{
-      max-width: 420px; width:100%;
-      border-radius: 14px; border:1px solid var(--border);
-      box-shadow: var(--shadow);
+      max-width:420px;width:100%;border-radius:14px;border:1px solid var(--border);box-shadow:var(--shadow);
     }
 
-    /* Τμηματικές ενότητες */
-    .section {
-      max-width: 1200px;
-      margin: 34px auto;
-      padding: 0 20px;
+    /* Ενότητες */
+    .section{max-width:1200px;margin:34px auto;padding:0 20px}
+    .card{
+      background:var(--surface);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow);
+      padding:34px;display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center;
     }
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      box-shadow: var(--shadow);
-      padding: 34px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 34px;
-      align-items: center;
-    }
-    .card.reverse { grid-template-columns: 1fr 1fr; direction: rtl; }
-    .card.reverse .text { direction: ltr; }
-    .card img {
-      width: 100%;
-      max-width: 520px;
-      border-radius: 14px;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-    }
-    .text p { margin-top: 8px; }
-    .text ul { margin: 10px 0 0; padding-left: 20px; line-height: 1.7; color: var(--muted); }
-    .text li { margin: 4px 0; }
-    .text strong { color: var(--ink); }
+    .card.reverse{grid-template-columns:1fr 1fr;direction:rtl}
+    .card.reverse .text{direction:ltr}
+    .card img{width:100%;max-width:520px;border-radius:14px;border:1px solid var(--border);box-shadow:var(--shadow)}
 
-    /* Διακριτικό έγχρωμο “accent” κάτω από τους τίτλους */
-    .accent {
-      display:inline-block;
-      height: 4px; width: 56px;
-      background: linear-gradient(90deg, var(--brand), #9a8bff);
-      border-radius: 99px;
-      margin: 10px 0 16px;
+    /* Υπογράμμιση τίτλων (όχι κάτω από το logo) */
+    .text h2{display:inline-block;position:relative;padding-bottom:10px}
+    .text h2::after{
+      content:"";position:absolute;left:0;right:0;bottom:-6px;height:var(--underline-h);
+      background:linear-gradient(90deg,var(--brand),#9a8bff);border-radius:99px;
     }
+
+    .text ul{margin:10px 0 0;padding-left:20px;line-height:1.7;color:var(--muted)}
+    .text li{margin:4px 0}
+    .text strong{color:var(--ink)}
 
     /* Store badges */
-    .store {
-      text-align:center;
-      margin: 60px 0 0;
-    }
-    .store .note { color: var(--muted); font-size: 15px; margin-top: 6px; }
-    .store-buttons {
-      display:flex; align-items:center; justify-content:center; gap:16px; flex-wrap:wrap;
-    }
-    .store-buttons a {
-      position: relative;
-      display:inline-block;
-      opacity: .7;               /* “coming soon” look */
-      pointer-events: none;      /* προσωρινά μη ενεργό */
-    }
-    .store-buttons img {
-      width: 170px; height: auto; display:block;
-      border-radius: 12px; border:1px solid var(--border); box-shadow: var(--shadow);
-      background:#fff;
-    }
-    .coming {
-      position:absolute; right:8px; bottom:8px;
-      font-size: 11px; font-weight:700; color:#fff;
-      background: linear-gradient(90deg, #111, #444); padding:4px 8px; border-radius:999px;
-      letter-spacing:.3px;
-    }
+    .store{text-align:center;margin:60px 0 0}
+    .store .note{color:var(--muted);font-size:15px;margin-top:6px}
+    .store-buttons{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap}
+    .store-buttons a{position:relative;display:inline-block;opacity:.7;pointer-events:none}
+    .store-buttons img{width:170px;height:auto;display:block;border-radius:12px;border:1px solid var(--border);box-shadow:var(--shadow);background:#fff}
+    .coming{position:absolute;right:8px;bottom:8px;font-size:11px;font-weight:700;color:#fff;background:linear-gradient(90deg,#111,#444);padding:4px 8px;border-radius:999px;letter-spacing:.3px}
 
-    /* Footer (μαύρη μπάρα ίδιο στυλ με header) */
-    footer {
-      background:#111; color:#fff; text-align:center; padding:28px 20px; margin-top: 60px;
-      border-top: 1px solid rgba(255,255,255,.08);
-    }
+    /* Footer (ίδιο με header) */
+    footer{background:#111;color:#fff;text-align:center;padding:28px 20px;margin-top:60px;border-top:1px solid rgba(255,255,255,.08)}
 
-    /* Responsiveness */
-    @media (max-width: 980px){
-      .hero-card { grid-template-columns: 1fr; gap: 24px; padding: 28px; }
-      .card, .card.reverse { grid-template-columns: 1fr; direction: ltr; }
+    /* Responsive */
+    @media (max-width:980px){
+      .hero-card{grid-template-columns:1fr;gap:24px;padding:28px}
+      .card,.card.reverse{grid-template-columns:1fr;direction:ltr}
+      .k-logo{max-width:300px}
+      .hero h2{font-size:32px}
+      .tagline{font-size:18px}
     }
-    @media (max-width: 560px){
-      h2{ font-size: 24px; }
-      .hero-card{ padding: 22px; }
-      .card{ padding: 22px; }
+    @media (max-width:560px){
+      h2{font-size:26px}
+      .hero-card{padding:22px}
+      .card{padding:22px}
     }
   </style>
 </head>
@@ -182,15 +128,16 @@
   <main>
     <!-- HERO -->
     <div class="hero">
-      <div class="hero-card">
+      <div class="hero-card hero">
         <div>
           <img class="k-logo" src="keetio-logo.png" alt="Keetio Logo" />
-          <div class="accent"></div>
+          <!-- αφαιρέθηκε η παλιά μωβ γραμμή κάτω από το logo -->
           <h2>Welcome to Keetio</h2>
           <p class="tagline">The live social app — Connect. Chat. Discover.</p>
         </div>
         <div class="hero-right">
-          <img class="hero-illu" src="images/section1.png" alt="Keetio people illustration">
+          <!-- Βάλε νέο αρχείο εδώ: images/hero_main.png -->
+          <img class="hero-illu" src="images/hero_main.png" alt="Keetio people illustration">
         </div>
       </div>
     </div>
@@ -203,7 +150,6 @@
         </div>
         <div class="text">
           <h2>Who's Around? Find Out Instantly.</h2>
-          <div class="accent"></div>
           <p>Whether you're out for coffee, drinks, or for a walk — keetio shows you who's nearby and open to connect. No swipes, no pressure. Just real people, right here, right now.</p>
         </div>
       </div>
@@ -217,7 +163,6 @@
         </div>
         <div class="text">
           <h2>Feel the Moment. Make a Connection.</h2>
-          <div class="accent"></div>
           <p>In the mood to meet someone? keetio makes it spontaneous and simple. Drop a greeting, spark a chat — and see where it goes.</p>
         </div>
       </div>
@@ -231,7 +176,6 @@
         </div>
         <div class="text">
           <h2>A Social App for Real-World Spaces</h2>
-          <div class="accent"></div>
           <p>Keetio is a location-based presence app that helps people connect when they’re in the same area or venue.
             Using a dynamic map or shared WiFi signals, users appear as avatars and can send greetings to nearby users.
             If both sides agree, a private chat opens — safe, friendly, and controlled by you.</p>
@@ -247,7 +191,6 @@
         </div>
         <div class="text">
           <h2>Two Modes. One Simple Goal: Connection.</h2>
-          <div class="accent"></div>
           <ul>
             <li><strong>Map Mode:</strong> See other users on a live map with privacy-preserving offset (≈300–500m). Great for parks, cities, campuses, or streets.</li>
             <li><strong>WiFi Mode:</strong> Perfect for indoor spaces like cafés, clubs, or events. When you're on the same WiFi, you see a list of others nearby — no map needed.</li>
@@ -264,7 +207,6 @@
         </div>
         <div class="text">
           <h2>Say Hi — the keetio Way</h2>
-          <div class="accent"></div>
           <p>Forget random DMs or creepy inboxes. On keetio, you start with a simple Greeting.
             It’s like a wave — if they wave back, you can chat. If not, no awkwardness.
             No one can message you unless you say yes. It’s mutual, smooth, and respectful.</p>
@@ -280,7 +222,6 @@
         </div>
         <div class="text">
           <h2>Privacy Comes First</h2>
-          <div class="accent"></div>
           <p>Keetio is not a dating app. It's a social presence tool built with safety in mind:</p>
           <ul>
             <li>✅ No live tracking</li>
