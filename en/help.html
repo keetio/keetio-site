@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>How Keetio Works</title>
+  <title>Keetio – How it Works</title>
   <style>
     body {
       margin: 0;
@@ -15,25 +14,25 @@
       background-size: 1400px auto;
     }
 
+    /* TOP BAR (μαύρη όπως στις άλλες σελίδες) */
     header {
-      background-color: #f0d6da;
+      background-color: #222;
       padding: 10px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
+      color: #fff;
     }
-
-    header .email {
-      font-weight: bold;
-      color: #333;
-    }
-
+    header .email { font-weight: bold; color: #fff; }
+    header .email a { color: #fff; text-decoration: none; }
     header nav a {
       margin-left: 15px;
-      color: #333;
+      color: #fff;
       text-decoration: none;
+      font-weight: 600;
     }
+    header nav a:hover { text-decoration: underline; }
 
     main {
       max-width: 900px;
@@ -48,6 +47,7 @@
       text-align: center;
       color: #cc3366;
       padding: 40px 0 10px;
+      margin: 0;
     }
 
     section {
@@ -55,16 +55,8 @@
       border-bottom: 1px solid #eee;
     }
 
-    h2 {
-      color: #444;
-      margin-bottom: 10px;
-    }
-
-    p {
-      color: #333;
-      font-size: 17px;
-      line-height: 1.6;
-    }
+    h2 { color: #444; margin-bottom: 10px; }
+    p  { color: #333; font-size: 17px; line-height: 1.6; }
 
     footer {
       background-color: #222;
@@ -75,20 +67,18 @@
     }
 
     @media (max-width: 600px) {
-      main {
-        padding: 10px;
-      }
+      main { padding: 10px; }
     }
   </style>
 </head>
 
 <body>
   <header>
-    <div class="email">contact@keetio.app</div>
+    <div class="email"><a href="mailto:info@keetio.app">info@keetio.app</a></div>
     <nav>
-      <a href="/en/index.html">Home</a>
-      <a href="/en/license.html">Terms</a>
-      <a href="/en/privacy.html">Privacy</a>
+      <a href="/">Home</a>
+      <a href="/licenses.html">Terms</a>
+      <a href="/privacies.html">Privacy</a>
     </nav>
   </header>
 
@@ -106,18 +96,18 @@
     </section>
 
     <section>
-      <h2>3. Map Mode & WiFi Mode</h2>
+      <h2>3. Map Mode &amp; WiFi Mode</h2>
       <p><strong>Map Mode:</strong> You appear on the map with a random offset (about 300–500 meters) for privacy. Others nearby can see your presence and greet you.</p>
       <p><strong>WiFi Mode:</strong> When you're in the same venue (e.g. bar, club, event) as others, you appear in a list of people connected to the same WiFi — with no map and no location shown.</p>
     </section>
 
     <section>
-      <h2>4. Blocking & Reporting</h2>
+      <h2>4. Blocking &amp; Reporting</h2>
       <p>If someone behaves inappropriately, you can block or report them at any time. Blocking prevents them from seeing or contacting you again. Reporting helps us keep Keetio safe — you can also add a reason for context.</p>
     </section>
 
     <section>
-      <h2>5. Privacy & Anonymity</h2>
+      <h2>5. Privacy &amp; Anonymity</h2>
       <p>Keetio is designed for safety. Your real-time location is hidden behind a smart offset. No one knows exactly where you are unless you choose to share more. You can use a nickname and control what others see. Appear when you’re available — disappear when you’re not.</p>
     </section>
   </main>
@@ -126,5 +116,4 @@
     <p>&copy; 2025 Keetio. All rights reserved.</p>
   </footer>
 </body>
-
 </html>
