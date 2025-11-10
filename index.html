@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,25 +14,25 @@
       background-size: 1400px auto;
     }
 
+    /* TOP BAR (μαύρη όπως το footer) */
     header {
-      background-color: #f0d6da;
+      background-color: #222;
       padding: 10px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
+      color: #fff;
     }
-
-    header .email {
-      font-weight: bold;
-      color: #333;
-    }
-
+    header .email { font-weight: bold; color: #fff; }
+    header .email a { color: #fff; text-decoration: none; }
     header nav a {
       margin-left: 15px;
-      color: #333;
+      color: #fff;
       text-decoration: none;
+      font-weight: 600;
     }
+    header nav a:hover { text-decoration: underline; }
 
     .section {
       display: flex;
@@ -42,7 +41,6 @@
       background: rgba(255, 240, 244, 0.9);
       margin-bottom: 60px;
     }
-
     .section .content {
       max-width: 1100px;
       width: 100%;
@@ -52,17 +50,12 @@
       gap: 80px;
       flex-wrap: nowrap;
     }
-
-    .section:nth-child(even) .content {
-      flex-direction: row-reverse;
-    }
-
+    .section:nth-child(even) .content { flex-direction: row-reverse; }
     .section img {
       max-width: 520px;
       width: 100%;
       border-radius: 8px;
     }
-
     .section .text {
       max-width: 500px;
       font-size: 18px;
@@ -75,35 +68,18 @@
       text-align: center;
       padding: 30px 20px;
     }
-
-    .store-buttons img {
-      width: 150px;
-      margin: 10px;
-    }
-
-    ul {
-      padding-left: 20px;
-      line-height: 1.7;
-    }
+    .store-buttons img { width: 150px; margin: 10px; }
+    ul { padding-left: 20px; line-height: 1.7; }
 
     @media (max-width: 900px) {
-      .section .content {
-        flex-direction: column !important;
-        gap: 30px;
-      }
-
-      .section img,
-      .section .text {
-        margin: 0 auto;
-        text-align: center;
-      }
+      .section .content { flex-direction: column !important; gap: 30px; }
+      .section img, .section .text { margin: 0 auto; text-align: center; }
     }
   </style>
 </head>
-
 <body>
   <header>
-    <div class="email">info@keetio.app</div>
+    <div class="email"><a href="mailto:info@keetio.app">info@keetio.app</a></div>
     <nav>
       <a href="/en/license.html">Terms</a>
       <a href="/en/privacy.html">Privacy</a>
@@ -211,5 +187,4 @@
     <p>&copy; 2025 Keetio. All rights reserved.</p>
   </footer>
 </body>
-
 </html>
