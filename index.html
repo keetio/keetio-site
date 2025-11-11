@@ -17,7 +17,6 @@
       --surface:#fff;
       --border:#e9e9f2;
       --shadow:0 8px 28px rgba(20,20,43,.08);
-      --underline-h:4px;
     }
 
     *{box-sizing:border-box}
@@ -31,7 +30,7 @@
       text-rendering:optimizeLegibility;
     }
     h1,h2{line-height:1.2;margin:0 0 .5rem}
-    h2{font-size:32px} /* μεγαλύτεροι τίτλοι */
+    h2{font-size:32px}
     p{margin:0;color:var(--muted);font-size:18px}
     a{color:var(--brand);text-decoration:none}
     a:hover{text-decoration:underline}
@@ -54,13 +53,8 @@
       display:grid;grid-template-columns:1.1fr .9fr;gap:40px;
       background:var(--surface);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow);padding:40px;
     }
-    .k-logo{max-width:340px;width:100%;height:auto;display:block} /* μεγαλύτερο logo */
-    .hero h2{font-size:36px;font-weight:800;display:inline-block;position:relative;padding-bottom:10px}
-    .hero h2::after{
-      content:"";position:absolute;left:0;right:0;bottom:-6px;height:var(--underline-h);
-      background:linear-gradient(90deg,var(--brand),#9a8bff);border-radius:99px;
-    }
-    .tagline{font-size:20px;font-weight:600;margin-top:10px} /* μεγαλύτερο & πιο έντονο */
+    .k-logo{max-width:340px;width:100%;height:auto;display:block}
+    .tagline{font-size:20px;font-weight:600;margin-top:10px}
     .hero-right{display:flex;align-items:center;justify-content:center}
     .hero-right .hero-illu{
       max-width:420px;width:100%;border-radius:14px;border:1px solid var(--border);box-shadow:var(--shadow);
@@ -75,14 +69,6 @@
     .card.reverse{grid-template-columns:1fr 1fr;direction:rtl}
     .card.reverse .text{direction:ltr}
     .card img{width:100%;max-width:520px;border-radius:14px;border:1px solid var(--border);box-shadow:var(--shadow)}
-
-    /* Υπογράμμιση τίτλων (όχι κάτω από το logo) */
-    .text h2{display:inline-block;position:relative;padding-bottom:10px}
-    .text h2::after{
-      content:"";position:absolute;left:0;right:0;bottom:-6px;height:var(--underline-h);
-      background:linear-gradient(90deg,var(--brand),#9a8bff);border-radius:99px;
-    }
-
     .text ul{margin:10px 0 0;padding-left:20px;line-height:1.7;color:var(--muted)}
     .text li{margin:4px 0}
     .text strong{color:var(--ink)}
@@ -103,7 +89,6 @@
       .hero-card{grid-template-columns:1fr;gap:24px;padding:28px}
       .card,.card.reverse{grid-template-columns:1fr;direction:ltr}
       .k-logo{max-width:300px}
-      .hero h2{font-size:32px}
       .tagline{font-size:18px}
     }
     @media (max-width:560px){
@@ -131,13 +116,12 @@
       <div class="hero-card hero">
         <div>
           <img class="k-logo" src="keetio-logo.png" alt="Keetio Logo" />
-          <!-- αφαιρέθηκε η παλιά μωβ γραμμή κάτω από το logo -->
           <h2>Welcome to Keetio</h2>
           <p class="tagline">The live social app — Connect. Chat. Discover.</p>
         </div>
         <div class="hero-right">
-          <!-- Βάλε νέο αρχείο εδώ: images/hero_main.png -->
-          <img class="hero-illu" src="images/hero_main.png" alt="Keetio people illustration">
+          <!-- Νέα εικόνα για διαφοροποίηση (βάλε το αρχείο στο images/hero_social.png) -->
+          <img class="hero-illu" src="images/hero_social.png" alt="People at a social coworking lounge">
         </div>
       </div>
     </div>
