@@ -35,7 +35,7 @@
     a{color:var(--brand);text-decoration:none}
     a:hover{text-decoration:underline}
 
-    /* Μαύρη TOP BAR */
+    /* Top Bar */
     header{
       background:#111;color:#fff;padding:12px 20px;
       display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
@@ -81,7 +81,7 @@
     .store-buttons img{width:170px;height:auto;display:block;border-radius:12px;border:1px solid var(--border);box-shadow:var(--shadow);background:#fff}
     .coming{position:absolute;right:8px;bottom:8px;font-size:11px;font-weight:700;color:#fff;background:linear-gradient(90deg,#111,#444);padding:4px 8px;border-radius:999px;letter-spacing:.3px}
 
-    /* Footer (ίδιο με header) */
+    /* Footer */
     footer{background:#111;color:#fff;text-align:center;padding:28px 20px;margin-top:60px;border-top:1px solid rgba(255,255,255,.08)}
 
     /* Responsive */
@@ -113,20 +113,19 @@
   <main>
     <!-- HERO -->
     <div class="hero">
-      <div class="hero-card hero">
-        <div>
-          <img class="k-logo" src="keetio-logo.png" alt="Keetio Logo" />
-          <h2>Welcome to Keetio</h2>
-          <p class="tagline">The live social app — Connect. Chat. Discover.</p>
+      <div class="hero-card">
+        <div style="display:flex; flex-direction:column; justify-content:center;">
+          <img class="k-logo" src="keetio-logo.png" alt="Keetio Logo" style="margin-bottom:10px;" />
+          <h2 style="margin-bottom:6px;">Welcome to Keetio</h2>
+          <p class="tagline" style="margin-top:0;">The live social app — Connect. Chat. Discover.</p>
         </div>
         <div class="hero-right">
-          <!-- Νέα εικόνα για διαφοροποίηση (βάλε το αρχείο στο images/hero_social.png) -->
-          <img class="hero-illu" src="images/hero_social.png" alt="People at a social coworking lounge">
+          <img class="hero-illu" src="images/section0.png" alt="People at a social coworking lounge">
         </div>
       </div>
     </div>
 
-    <!-- Section 1 -->
+    <!-- Sections -->
     <section class="section">
       <div class="card">
         <div>
@@ -139,7 +138,6 @@
       </div>
     </section>
 
-    <!-- Section 2 -->
     <section class="section">
       <div class="card reverse">
         <div>
@@ -152,7 +150,6 @@
       </div>
     </section>
 
-    <!-- Section 3 -->
     <section class="section">
       <div class="card">
         <div>
@@ -167,7 +164,6 @@
       </div>
     </section>
 
-    <!-- Section 4 -->
     <section class="section">
       <div class="card reverse">
         <div>
@@ -183,7 +179,6 @@
       </div>
     </section>
 
-    <!-- Section 5 -->
     <section class="section">
       <div class="card">
         <div>
@@ -198,7 +193,6 @@
       </div>
     </section>
 
-    <!-- Section 6 -->
     <section class="section">
       <div class="card reverse">
         <div>
@@ -217,15 +211,15 @@
       </div>
     </section>
 
-    <!-- Store badges (placeholder) -->
+    <!-- Store Badges -->
     <section class="section store">
       <div class="store-buttons">
-        <a href="#">
-          <img src="images/google-play-badge.png" alt="Get it on Google Play">
+        <a>
+          <img src="images/GetItOnGooglePlay_Badge_Web_color_English.png" alt="Get it on Google Play">
           <span class="coming">Coming soon</span>
         </a>
-        <a href="#">
-          <img src="images/app-store-badge.png" alt="Download on the App Store">
+        <a>
+          <img src="images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store">
           <span class="coming">Coming soon</span>
         </a>
       </div>
@@ -233,7 +227,7 @@
     </section>
   </main>
 
-  <!-- BOTTOM -->
+  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Keetio. All rights reserved.</p>
   </footer>
