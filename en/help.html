@@ -4,70 +4,107 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Keetio – How it Works</title>
+
+  <!-- Noto Sans για να ταιριάζει με την κεντρική σελίδα -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: #f7f7f7;
-      background-image: url("images/backround.png");
-      background-repeat: repeat;
+      font-family: "Noto Sans", Arial, sans-serif;
+      background: #f7f7f7 url("images/backround.png") repeat;
       background-size: 1400px auto;
+      color: #1f2330;
+      -webkit-font-smoothing: antialiased;
     }
 
-    /* TOP BAR (μαύρη όπως στις άλλες σελίδες) */
+    /* TOP BAR */
     header {
-      background-color: #222;
+      background-color: #111;
+      color: #fff;
       padding: 10px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      color: #fff;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
-    header .email { font-weight: bold; color: #fff; }
-    header .email a { color: #fff; text-decoration: none; }
+    header .email a {
+      color: #fff;
+      font-weight: 700;
+      letter-spacing: .2px;
+      text-decoration: none;
+    }
     header nav a {
       margin-left: 15px;
       color: #fff;
-      text-decoration: none;
       font-weight: 600;
+      text-decoration: none;
+      padding: 4px 8px;
+      border-radius: 10px;
     }
-    header nav a:hover { text-decoration: underline; }
+    header nav a:hover {
+      background: rgba(255,255,255,0.08);
+    }
 
+    /* CENTER CONTENT */
     main {
       max-width: 900px;
       margin: 60px auto;
-      padding: 0 20px;
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      padding: 40px 28px;
+      background: rgba(255,255,255,0.97);
+      border-radius: 16px;
+      box-shadow: 0 8px 28px rgba(20,20,43,.08);
     }
 
     h1 {
       text-align: center;
-      color: #cc3366;
-      padding: 40px 0 10px;
+      color: #6c5ce7;
       margin: 0;
+      padding-bottom: 20px;
+      font-size: 32px;
+      font-weight: 700;
     }
 
     section {
-      padding: 30px 0;
+      padding: 24px 0;
       border-bottom: 1px solid #eee;
     }
+    section:last-child {
+      border-bottom: none;
+    }
 
-    h2 { color: #444; margin-bottom: 10px; }
-    p  { color: #333; font-size: 17px; line-height: 1.6; }
+    h2 {
+      color: #444;
+      margin-bottom: 8px;
+      font-weight: 700;
+      font-size: 22px;
+    }
+
+    p {
+      color: #333;
+      font-size: 17px;
+      line-height: 1.6;
+      margin: 0;
+    }
 
     footer {
-      background-color: #222;
+      background-color: #111;
       color: white;
       text-align: center;
       padding: 30px 20px;
       margin-top: 60px;
+      border-top: 1px solid rgba(255,255,255,.08);
     }
 
     @media (max-width: 600px) {
-      main { padding: 10px; }
+      main {
+        margin: 30px 10px;
+        padding: 20px;
+      }
+      h1 {
+        font-size: 26px;
+      }
     }
   </style>
 </head>
