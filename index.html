@@ -22,7 +22,7 @@
     *{box-sizing:border-box}
     body{
       margin:0;
-      font-family:"Noto Sans",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,sans-serif;
+      font-family:"Noto Sans",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
       color:var(--ink);
       background:var(--bg) url("images/backround.png") repeat;
       background-size:1400px auto;
@@ -41,8 +41,10 @@
       display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
       border-bottom:1px solid rgba(255,255,255,.08);
     }
-    header .email a{color:#fff;font-weight:700}
-    header nav a{color:#fff;font-weight:600;margin-left:16px;padding:6px 10px;border-radius:10px}
+    header .email a{color:#fff;font-weight:700;letter-spacing:.2px}
+    header nav a{
+      color:#fff;font-weight:600;margin-left:16px;padding:6px 10px;border-radius:10px;
+    }
     header nav a:hover{background:rgba(255,255,255,.08);text-decoration:none}
 
     /* HERO */
@@ -52,21 +54,21 @@
       background:var(--surface);border:1px solid var(--border);
       border-radius:18px;box-shadow:var(--shadow);padding:40px;
     }
-
-    /* 🔹 Alignment fix */
-    .hero-card > div:nth-child(1){
-      padding-left:20px; /* Μικρή μετακίνηση δεξιά */
+    .hero-text{
+      padding-left:20px;   /* μικρό shift δεξιά για alignment */
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
     }
-
-    .k-logo{max-width:340px;width:100%;height:auto;display:block}
-    .tagline{font-size:20px;font-weight:600;margin-top:10px}
+    .k-logo{max-width:340px;width:100%;height:auto;display:block;margin-bottom:10px}
+    .tagline{font-size:20px;font-weight:600;margin-top:4px}
     .hero-right{display:flex;align-items:center;justify-content:center}
     .hero-illu{
       max-width:420px;width:100%;border-radius:14px;
       border:1px solid var(--border);box-shadow:var(--shadow);
     }
 
-    /* Sections */
+    /* SECTIONS */
     .section{max-width:1200px;margin:34px auto;padding:0 20px}
     .card{
       background:var(--surface);border:1px solid var(--border);
@@ -76,32 +78,50 @@
     }
     .card.reverse{grid-template-columns:1fr 1fr;direction:rtl}
     .card.reverse .text{direction:ltr}
-    .card img{width:100%;max-width:520px;border-radius:14px;border:1px solid var(--border);box-shadow:var(--shadow)}
+    .card img{
+      width:100%;max-width:520px;border-radius:14px;
+      border:1px solid var(--border);box-shadow:var(--shadow);
+    }
     .text ul{margin:10px 0 0;padding-left:20px;line-height:1.7;color:var(--muted)}
     .text li{margin:4px 0}
+    .text strong{color:var(--ink)}
 
-    /* Store badges */
+    /* STORE BADGES */
     .store{text-align:center;margin:60px 0 0}
-    .store-buttons{display:flex;align-items:center;justify-content:center;gap:30px;flex-wrap:wrap}
+    .store-buttons{
+      display:flex;align-items:flex-start;justify-content:center;
+      gap:26px;flex-wrap:wrap;
+    }
     .store-item{text-align:center}
     .store-item img{
-      width:170px;height:auto;border-radius:12px;
-      border:1px solid var(--border);box-shadow:var(--shadow);
-      background:#fff;display:block;
+      width:170px;height:auto;display:block;
+      border-radius:12px;border:1px solid var(--border);
+      box-shadow:var(--shadow);background:#fff;
     }
     .coming-note{
-      font-size:14px;font-weight:600;color:var(--muted);
-      margin-top:8px;opacity:0.7;
+      font-size:13px;font-weight:600;color:var(--muted);
+      margin-top:6px;opacity:0.8;
     }
-    .note{color:var(--muted);font-size:15px;margin-top:6px}
+    .store .note{color:var(--muted);font-size:15px;margin-top:10px}
 
-    /* Footer */
-    footer{background:#111;color:#fff;text-align:center;padding:28px;margin-top:60px;border-top:1px solid rgba(255,255,255,.08)}
+    /* FOOTER */
+    footer{
+      background:#111;color:#fff;text-align:center;
+      padding:28px 20px;margin-top:60px;
+      border-top:1px solid rgba(255,255,255,.08);
+    }
 
-    /* Responsive */
-    @media(max-width:980px){
+    /* RESPONSIVE */
+    @media (max-width:980px){
       .hero-card{grid-template-columns:1fr;gap:24px;padding:28px}
-      .hero-card > div:nth-child(1){padding-left:0}
+      .hero-text{padding-left:0}
+      .k-logo{max-width:300px}
+      .tagline{font-size:18px}
+    }
+    @media (max-width:560px){
+      h2{font-size:26px}
+      .hero-card{padding:22px}
+      .card{padding:22px}
     }
   </style>
 </head>
@@ -121,13 +141,14 @@
     <!-- HERO -->
     <div class="hero">
       <div class="hero-card">
-        <div>
+        <div class="hero-text">
           <img class="k-logo" src="keetio-logo.png" alt="Keetio Logo" />
           <h2>Welcome to Keetio</h2>
           <p class="tagline">The live social app — Connect. Chat. Discover.</p>
         </div>
         <div class="hero-right">
-          <img class="hero-illu" src="images/section0.png" alt="People at a social coworking lounge">
+          <!-- section 0.png με κενό στο όνομα -->
+          <img class="hero-illu" src="images/section%200.png" alt="People at a social coworking lounge">
         </div>
       </div>
     </div>
@@ -135,10 +156,12 @@
     <!-- Section 1 -->
     <section class="section">
       <div class="card">
-        <div><img src="images/section1.png" alt="Park scene" /></div>
+        <div>
+          <img src="images/section1.png" alt="Park scene" />
+        </div>
         <div class="text">
           <h2>Who's Around? Find Out Instantly.</h2>
-          <p>Whether you're out for coffee, drinks, or for a walk — keetio shows you who's nearby and open to connect.</p>
+          <p>Whether you're out for coffee, drinks, or for a walk — keetio shows you who's nearby and open to connect. No swipes, no pressure. Just real people, right here, right now.</p>
         </div>
       </div>
     </section>
@@ -146,10 +169,12 @@
     <!-- Section 2 -->
     <section class="section">
       <div class="card reverse">
-        <div><img src="images/section2.png" alt="Beach scene" /></div>
+        <div>
+          <img src="images/section2.png" alt="Beach scene" />
+        </div>
         <div class="text">
           <h2>Feel the Moment. Make a Connection.</h2>
-          <p>Drop a greeting, spark a chat — and see where it goes.</p>
+          <p>In the mood to meet someone? keetio makes it spontaneous and simple. Drop a greeting, spark a chat — and see where it goes.</p>
         </div>
       </div>
     </section>
@@ -157,25 +182,77 @@
     <!-- Section 3 -->
     <section class="section">
       <div class="card">
-        <div><img src="images/section3.png" alt="Nightlife" /></div>
+        <div>
+          <img src="images/section3.png" alt="Nightlife" />
+        </div>
         <div class="text">
           <h2>A Social App for Real-World Spaces</h2>
-          <p>Location-based presence app using dynamic maps or WiFi for nearby discovery.</p>
+          <p>Keetio is a location-based presence app that helps people connect when they’re in the same area or venue.
+            Using a dynamic map or shared WiFi signals, users appear as avatars and can send greetings to nearby users.
+            If both sides agree, a private chat opens — safe, friendly, and controlled by you.</p>
         </div>
       </div>
     </section>
 
-    <!-- Sections 4, 5, 6 παραμένουν όπως ήταν (δεν τα αλλάξαμε) -->
+    <!-- Section 4 -->
+    <section class="section">
+      <div class="card reverse">
+        <div>
+          <img src="images/section4.png" alt="University scene" />
+        </div>
+        <div class="text">
+          <h2>Two Modes. One Simple Goal: Connection.</h2>
+          <ul>
+            <li><strong>Map Mode:</strong> See other users on a live map with privacy-preserving offset (≈300–500m). Great for parks, cities, campuses, or streets.</li>
+            <li><strong>WiFi Mode:</strong> Perfect for indoor spaces like cafés, clubs, or events. When you're on the same WiFi, you see a list of others nearby — no map needed.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5 -->
+    <section class="section">
+      <div class="card">
+        <div>
+          <img src="images/section5.png" alt="People in motion" />
+        </div>
+        <div class="text">
+          <h2>Say Hi — the keetio Way</h2>
+          <p>Forget random DMs or creepy inboxes. On keetio, you start with a simple Greeting.
+            It’s like a wave — if they wave back, you can chat. If not, no awkwardness.
+            No one can message you unless you say yes. It’s mutual, smooth, and respectful.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6 -->
+    <section class="section">
+      <div class="card reverse">
+        <div>
+          <img src="images/section6.png" alt="Café gathering" />
+        </div>
+        <div class="text">
+          <h2>Privacy Comes First</h2>
+          <p>Keetio is not a dating app. It's a social presence tool built with safety in mind:</p>
+          <ul>
+            <li>✅ No live tracking</li>
+            <li>✅ No spam inbox</li>
+            <li>✅ No pressure to reveal your name or photo</li>
+          </ul>
+          <p>You're always in control. Appear when you want. Vanish when you don’t.</p>
+        </div>
+      </div>
+    </section>
 
     <!-- Store badges -->
     <section class="section store">
       <div class="store-buttons">
         <div class="store-item">
-          <img src="images/google-play-badge.png" alt="Get it on Google Play" />
+          <img src="images/GetItOnGooglePlay_Badge_Web_color_English.png" alt="Get it on Google Play">
           <div class="coming-note">Coming soon</div>
         </div>
         <div class="store-item">
-          <img src="images/app-store-badge.png" alt="Download on the App Store" />
+          <img src="images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store">
           <div class="coming-note">Coming soon</div>
         </div>
       </div>
