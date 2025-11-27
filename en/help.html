@@ -5,20 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Keetio – How it Works</title>
 
-  <!-- Noto Sans για να ταιριάζει με την κεντρική σελίδα -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
+    :root{
+      --brand:#6c5ce7;
+      --ink:#1f2330;
+      --muted:#5b6170;
+      --bg:#f6f7fb;
+      --surface:#fff;
+      --border:#e9e9f2;
+      --shadow:0 8px 28px rgba(20,20,43,.08);
+    }
+
+    *{box-sizing:border-box}
+
     body {
       margin: 0;
       font-family: "Noto Sans", Arial, sans-serif;
-      background: #f7f7f7 url("images/backround.png") repeat;
+      color: var(--ink);
+      background: var(--bg) url("../images/backround.png") repeat;
       background-size: 1400px auto;
-      color: #1f2330;
       -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
-    /* TOP BAR */
     header {
       background-color: #111;
       color: #fff;
@@ -32,7 +43,6 @@
     header .email a {
       color: #fff;
       font-weight: 700;
-      letter-spacing: .2px;
       text-decoration: none;
     }
     header nav a {
@@ -43,50 +53,31 @@
       padding: 4px 8px;
       border-radius: 10px;
     }
-    header nav a:hover {
-      background: rgba(255,255,255,0.08);
-    }
+    header nav a:hover { background: rgba(255,255,255,0.08); }
 
-    /* ΚΕΝΤΡΙΚΟ ΠΕΡΙΕΧΟΜΕΝΟ */
     main {
       max-width: 900px;
       margin: 60px auto;
       padding: 40px 28px;
-      background: rgba(255,255,255,0.97); /* ΟΧΙ blur */
+      background: rgba(255,255,255,0.97);
       border-radius: 16px;
-      box-shadow: 0 8px 28px rgba(20,20,43,.08);
+      box-shadow: var(--shadow);
     }
 
     h1 {
       text-align: center;
-      color: #6c5ce7;
+      color: var(--brand);
       margin: 0;
       padding-bottom: 20px;
       font-size: 32px;
       font-weight: 700;
     }
 
-    section {
-      padding: 24px 0;
-      border-bottom: 1px solid #eee;
-    }
-    section:last-child {
-      border-bottom: none;
-    }
+    section { padding: 24px 0; border-bottom: 1px solid #eee; }
+    section:last-child { border-bottom: none; }
 
-    h2 {
-      color: #444;
-      margin-bottom: 8px;
-      font-weight: 700;
-      font-size: 22px;
-    }
-
-    p {
-      color: #333;
-      font-size: 17px;
-      line-height: 1.6;
-      margin: 0;
-    }
+    h2 { font-size: 22px; margin-bottom: 8px; font-weight: 700; }
+    p { font-size: 17px; line-height: 1.6; margin: 0; }
 
     footer {
       background-color: #111;
@@ -98,13 +89,8 @@
     }
 
     @media (max-width: 600px) {
-      main {
-        margin: 30px 10px;
-        padding: 20px;
-      }
-      h1 {
-        font-size: 26px;
-      }
+      main { margin: 30px 10px; padding: 20px; }
+      h1 { font-size: 26px; }
     }
   </style>
 </head>
