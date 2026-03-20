@@ -1,10 +1,10 @@
 {
   "latestVersion": "1.0.11",
-  "minVersion": "1.0.10",
-  "forceUpdate": false,
+  "minVersion": "1.0.11",
+  "forceUpdate": true,
   "message": {
-    "en": "A new version of Keetio is available. We recommend updating for the best experience.",
-    "el": "Υπάρχει καινούργια έκδοση του Keetio. Σας προτείνουμε να κάνετε ενημέρωση για την καλύτερη εμπειρία."
+    "en": "A new version of Keetio is required to continue. Please update the app.",
+    "el": "Απαιτείται καινούργια έκδοση του Keetio για να συνεχίσετε. Παρακαλώ κάντε ενημέρωση."
   },
   "androidUrl": "https://play.google.com/store/apps/details?id=com.keetio.app",
   "iosUrl": "https://apps.apple.com/app/id1234567890"
